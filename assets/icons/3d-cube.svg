@@ -1,0 +1,168 @@
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cubeGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="cubeGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#93c5fd;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="cubeGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="cubeShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="5" stdDeviation="10" flood-color="rgba(96, 165, 250, 0.3)"/>
+    </filter>
+    <filter id="cubeGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- 3D Cube with perspective -->
+  <g id="cube3d" transform="translate(100, 100) rotateX(-20) rotateY(30)" filter="url(#cubeShadow)">
+    
+    <!-- Front face -->
+    <g id="front-face" transform="translateZ(50)">
+      <rect x="-40" y="-40" width="80" height="80" fill="url(#cubeGradient1)" 
+            stroke="#60a5fa" stroke-width="1" filter="url(#cubeGlow)"/>
+      <rect x="-35" y="-35" width="70" height="70" fill="none" stroke="#93c5fd" stroke-width="0.5" stroke-dasharray="2,2"/>
+    </g>
+    
+    <!-- Back face -->
+    <g id="back-face" transform="translateZ(-50)">
+      <rect x="-40" y="-40" width="80" height="80" fill="url(#cubeGradient3)" 
+            stroke="#3b82f6" stroke-width="1"/>
+      <rect x="-35" y="-35" width="70" height="70" fill="none" stroke="#60a5fa" stroke-width="0.5" stroke-dasharray="2,2"/>
+    </g>
+    
+    <!-- Right face -->
+    <g id="right-face" transform="rotateY(90) translateZ(50)">
+      <rect x="-40" y="-40" width="80" height="80" fill="url(#cubeGradient2)" 
+            stroke="#60a5fa" stroke-width="1" filter="url(#cubeGlow)"/>
+      <rect x="-35" y="-35" width="70" height="70" fill="none" stroke="#93c5fd" stroke-width="0.5" stroke-dasharray="2,2"/>
+    </g>
+    
+    <!-- Left face -->
+    <g id="left-face" transform="rotateY(-90) translateZ(50)">
+      <rect x="-40" y="-40" width="80" height="80" fill="url(#cubeGradient2)" 
+            stroke="#60a5fa" stroke-width="1"/>
+      <rect x="-35" y="-35" width="70" height="70" fill="none" stroke="#93c5fd" stroke-width="0.5" stroke-dasharray="2,2"/>
+    </g>
+    
+    <!-- Top face -->
+    <g id="top-face" transform="rotateX(90) translateZ(50)">
+      <rect x="-40" y="-40" width="80" height="80" fill="url(#cubeGradient1)" 
+            stroke="#60a5fa" stroke-width="1" filter="url(#cubeGlow)"/>
+      <rect x="-35" y="-35" width="70" height="70" fill="none" stroke="#93c5fd" stroke-width="0.5" stroke-dasharray="2,2"/>
+    </g>
+    
+    <!-- Bottom face -->
+    <g id="bottom-face" transform="rotateX(-90) translateZ(50)">
+      <rect x="-40" y="-40" width="80" height="80" fill="url(#cubeGradient3)" 
+            stroke="#3b82f6" stroke-width="1"/>
+      <rect x="-35" y="-35" width="70" height="70" fill="none" stroke="#60a5fa" stroke-width="0.5" stroke-dasharray="2,2"/>
+    </g>
+    
+    <!-- Decorative elements on faces -->
+    <g id="decorations" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.8">
+      <!-- Front face - Neural network pattern -->
+      <g transform="translateZ(55)">
+        <circle cx="-20" cy="-20" r="3"/>
+        <circle cx="-20" cy="0" r="3"/>
+        <circle cx="-20" cy="20" r="3"/>
+        <circle cx="0" cy="-20" r="3"/>
+        <circle cx="0" cy="0" r="3"/>
+        <circle cx="0" cy="20" r="3"/>
+        <circle cx="20" cy="-20" r="3"/>
+        <circle cx="20" cy="0" r="3"/>
+        <circle cx="20" cy="20" r="3"/>
+        <path d="M-20 -20L0 0L20 -20" stroke-dasharray="2,2"/>
+        <path d="M-20 0L0 0L20 0" stroke-dasharray="2,2"/>
+        <path d="M-20 20L0 0L20 20" stroke-dasharray="2,2"/>
+        <path d="M0 -20L0 0L0 20" stroke-dasharray="2,2"/>
+      </g>
+      
+      <!-- Right face - Code pattern -->
+      <g transform="rotateY(90) translateZ(55)">
+        <path d="M-25 -15L-15 -15L-15 -5" stroke-dasharray="2,2"/>
+        <path d="M-25 -5L-15 -5L-15 5" stroke-dasharray="2,2"/>
+        <path d="M-25 5L-15 5L-15 15" stroke-dasharray="2,2"/>
+        <path d="M-5 -15L5 -15L5 -5" stroke-dasharray="2,2"/>
+        <path d="M-5 -5L5 -5L5 5" stroke-dasharray="2,2"/>
+        <path d="M-5 5L5 5L5 15" stroke-dasharray="2,2"/>
+      </g>
+      
+      <!-- Top face - Particle pattern -->
+      <g transform="rotateX(90) translateZ(55)">
+        <circle cx="-25" cy="-15" r="2"/>
+        <circle cx="-15" cy="-25" r="2"/>
+        <circle cx="0" cy="-25" r="2"/>
+        <circle cx="15" cy="-25" r="2"/>
+        <circle cx="25" cy="-15" r="2"/>
+        <circle cx="25" cy="0" r="2"/>
+        <circle cx="25" cy="15" r="2"/>
+        <circle cx="15" cy="25" r="2"/>
+        <circle cx="0" cy="25" r="2"/>
+        <circle cx="-15" cy="25" r="2"/>
+        <circle cx="-25" cy="15" r="2"/>
+        <circle cx="-25" cy="0" r="2"/>
+      </g>
+    </g>
+    
+    <!-- Animated elements -->
+    <g id="animated-elements">
+      <!-- Pulsing circles on front face -->
+      <circle cx="-20" cy="-20" r="3" fill="#60a5fa" transform="translateZ(55)">
+        <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="20" cy="20" r="3" fill="#60a5fa" transform="translateZ(55)">
+        <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+      </circle>
+      
+      <!-- Floating particles around cube -->
+      <circle cx="-60" cy="-60" r="2" fill="#60a5fa" opacity="0.6">
+        <animateMotion path="M-60,-60 C-40,-80 0,-80 20,-60" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="60" cy="-60" r="2" fill="#3b82f6" opacity="0.6">
+        <animateMotion path="M60,-60 C40,-80 0,-80 -20,-60" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" begin="1s"/>
+      </circle>
+      <circle cx="60" cy="60" r="2" fill="#93c5fd" opacity="0.6">
+        <animateMotion path="M60,60 C40,80 0,80 -20,60" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" begin="2s"/>
+      </circle>
+      <circle cx="-60" cy="60" r="2" fill="#93c5fd" opacity="0.6">
+        <animateMotion path="M-60,60 C-40,80 0,80 20,60" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" begin="3s"/>
+      </circle>
+    </g>
+    
+    <!-- Connection lines between vertices -->
+    <g id="connections" stroke="#60a5fa" stroke-width="0.5" opacity="0.6">
+      <line x1="-40" y1="-40" x2="-40" y2="40" transform="translateZ(50)"/>
+      <line x1="-40" y1="-40" x2="40" y2="-40" transform="translateZ(50)"/>
+      <line x1="-40" y1="40" x2="40" y2="40" transform="translateZ(50)"/>
+      <line x1="40" y1="-40" x2="40" y2="40" transform="translateZ(50)"/>
+      <line x1="-40" y1="-40" x2="40" y2="40" transform="translateZ(50)"/>
+      <line x1="-40" y1="40" x2="40" y2="-40" transform="translateZ(50)"/>
+    </g>
+    
+  </g>
+
+  <!-- Background glow -->
+  <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+    <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.1" />
+    <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:0" />
+  </radialGradient>
+  <rect x="0" y="0" width="200" height="200" fill="url(#bgGlow)"/>
+
+  <!-- Label -->
+  <text x="100" y="190" text-anchor="middle" fill="#60a5fa" font-family="Inter, sans-serif" 
+        font-size="12" font-weight="500">3D Intelligence</text>
+</svg>
